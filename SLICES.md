@@ -8,11 +8,18 @@
 | Vite playground (`/playground`) | ✅ |
 | Vitest + happy-dom | ✅ |
 | Landing + `/docs` | ✅ |
-| Vercel deploy | ⏳ push + connect |
-| npm publish `@jssuite/vizat@2` | ⏳ |
-| React bindings package | 🔜 optional |
+| CI + release workflows | ✅ |
+| `robots.txt` + sitemap | ✅ |
+| Vercel deploy | ⏳ push + connect project |
+| npm publish `@jssuite/vizat@2` | ⏳ tag `v2.0.0` + `NPM_TOKEN` |
 
-## Next
+## CD
 
-- Interactive code editor in playground (Monaco)
-- Benchmark vs raw canvas / Konva (blog post)
+- Push → `CI` (test, lib build, demo build)
+- Tag `v2.0.0` → npm publish
+- Vercel root: `dist-demo` (see `vercel.json`)
+
+## Next lap (Boy Scout)
+
+- Monaco live editor in playground
+- favicon.svg
