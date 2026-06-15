@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-demo/
+
+# Vite
+.vite/
+
+# Test / coverage
+coverage/
+
+# Logs & env
+*.log
+npm-debug.log*
+.env
+.env.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Legacy package folder build artifacts (pre-v2)
+package/lib/
+package/node_modules/

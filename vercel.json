@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:demo",
+  "outputDirectory": "dist-demo",
+  "routes": [
+    { "src": "/docs", "dest": "/docs.html" },
+    { "src": "/playground", "dest": "/playground.html" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

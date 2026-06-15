@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Docs — Vizat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo">Viz<strong>at</strong></a>
+        <nav class="nav"><a href="/playground/">Playground</a><a href="/docs">Docs</a></nav>
+      </div>
+    </header>
+    <main class="docs-main container">
+      <h1>API Reference</h1>
+
+      <h2>Install</h2>
+      <pre>npm i @jssuite/vizat</pre>
+
+      <h2>Quick start</h2>
+      <pre>import { Wrapper, Canvas, Rect, Line } from "@jssuite/vizat";
+
+const wrapper = new Wrapper("container", { height: "400px", width: "100%" });
+const canvas = new Canvas({ height: "400px", width: "800px", background: "#222" });
+wrapper.add(canvas);
+
+canvas.add(new Rect({
+  x: 40, y: 40, width: 120, height: 80,
+  options: { fillStyle: "blueviolet" },
+}));
+
+canvas.draw();</pre>
+
+      <h2>Classes</h2>
+      <ul>
+        <li><code>Wrapper(id, config)</code> — mounts a Canvas into a DOM element</li>
+        <li><code>Canvas(config)</code> — scene root; <code>add()</code>, <code>clear()</code>, <code>draw()</code></li>
+        <li><code>Line</code>, <code>Rect</code>, <code>Circle</code>, <code>Curve</code>, <code>Text</code>, <code>Gradient</code>, <code>Image</code></li>
+      </ul>
+
+      <h2>Options</h2>
+      <p>Shape <code>options</code> map to <code>CanvasRenderingContext2D</code> — strokeStyle, fillStyle, lineWidth, dash, rotation, shadows, fonts.</p>
+
+      <h2>Playground</h2>
+      <p>Live demo: <a href="/playground">/playground</a></p>
+    </main>
+  </body>
+</html>

@@ -1,88 +1,38 @@
-# Vizat
+# @jssuite/vizat
 
-****
+**Vizat v2** — blazing-fast HTML5 Canvas 2D library with a scene-tree rendering model.
 
-<p>Version 1.0.0</p>
-<p>by m3yevn</p>
+- **Site:** [vizat.vercel.app](https://vizat.vercel.app) (deploy after push)
+- **Playground:** `/playground`
+- **Docs:** `/docs`
 
-<hr/>
-
- - Blazingly fast using tree structure to draw
- - Easy to configure with API similar to native HTML5 Canvas
- - Simple, Small and Concise
-
-
-
-
-## ⭐ Public Url
-
-https://github.com/JsSuite/vizat
-
-## 📚 Tech Stack
-
- - JavaScript
- - HTML5 Canvas API
-
-
-## 📸 Screenshots
-
-N.A
-
-## 📜 Scripts
+## Install
 
 ```sh
-N.A
+npm i @jssuite/vizat
 ```
 
-## 🔑 Keywords
+## Quick start
 
+```js
+import { Wrapper, Canvas, Rect } from "@jssuite/vizat";
 
+const wrapper = new Wrapper("container", { height: "400px", width: "100%" });
+const canvas = new Canvas({ height: "400px", width: "800px", background: "#1a1a2e" });
+wrapper.add(canvas);
 
-## 👾 Submit issues at
+canvas.add(new Rect({ x: 40, y: 40, width: 120, height: 80, options: { fillStyle: "blueviolet" } }));
+canvas.draw();
+```
 
-Visit the repository to open bug reports and issues
+## Develop
 
-## ©️ License
+```sh
+npm install
+npm run dev          # playground at localhost:5173/playground.html
+npm test
+npm run build        # npm lib → dist/
+npm run build:demo   # static site → dist-demo/
+```
 
-MIT License
-
-Copyright (c) 2020 Techlestial
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-## Dependencies
-
-This project does not have dependencies
-
-## Dev Dependencies
-
- - browserify : $ ^17.0.0
- - esmify : $ ^2.1.1
-
-
-<img src="https://cdn.dribbble.com/users/2401141/screenshots/5487982/developers-gif-showcase.gif"/>
-
-## Documentations
-
- - Examples: https://github.com/JsSuite/vizat/blob/master/example/main.js
- - Options: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
-
-
-<hr/>
-Happy Coding!
+MIT · [@JsSuite](https://github.com/JsSuite)

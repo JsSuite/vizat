@@ -1,9 +1,39 @@
 {
-  "name": "vizat",
-  "version": "1.0.0",
+  "name": "@jssuite/vizat",
+  "version": "2.0.0",
+  "description": "Vizat — blazing-fast HTML5 Canvas 2D scene-tree library",
+  "type": "module",
+  "main": "./dist/vizat.umd.cjs",
+  "module": "./dist/vizat.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vizat.js",
+      "require": "./dist/vizat.umd.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --emitDeclarationOnly && vite build --config vite.lib.config.ts",
+    "build:demo": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JsSuite/vizat.git"
+  },
+  "homepage": "https://vizat.vercel.app",
+  "keywords": ["canvas", "2d", "graphics", "vizat", "html5"],
   "author": "m3yevn",
+  "license": "MIT",
   "devDependencies": {
-    "browserify": "^17.0.0",
-    "esmify": "^2.1.1"
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
   }
 }
