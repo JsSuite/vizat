@@ -27,3 +27,4 @@ Thumbs.db
 # Legacy package folder build artifacts (pre-v2)
 package/lib/
 package/node_modules/
+.vercel
