@@ -1,21 +1,21 @@
-# @jssuite/vizat
+# vizat
 
 **Vizat v2** — blazing-fast HTML5 Canvas 2D library with a scene-tree rendering model.
 
-- **Site:** [vizat.vercel.app](https://vizat.vercel.app) (deploy after push)
+- **Site:** [vizat.vercel.app](https://vizat.vercel.app)
 - **Playground:** `/playground`
 - **Docs:** `/docs`
 
 ## Install
 
 ```sh
-npm i @jssuite/vizat
+npm i vizat
 ```
 
 ## Quick start
 
 ```js
-import { Wrapper, Canvas, Rect } from "@jssuite/vizat";
+import { Wrapper, Canvas, Rect } from "vizat";
 
 const wrapper = new Wrapper("container", { height: "400px", width: "100%" });
 const canvas = new Canvas({ height: "400px", width: "800px", background: "#1a1a2e" });

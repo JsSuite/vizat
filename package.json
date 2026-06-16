@@ -1,5 +1,5 @@
 {
-  "name": "@jssuite/vizat",
+  "name": "vizat",
   "version": "2.0.0",
   "description": "Vizat — blazing-fast HTML5 Canvas 2D scene-tree library",
   "type": "module",
@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc --emitDeclarationOnly && vite build --config vite.lib.config.ts",
+    "build": "rimraf dist && tsc --emitDeclarationOnly && vite build --config vite.lib.config.ts",
     "build:demo": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
@@ -42,6 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "happy-dom": "^20.10.4",
+    "rimraf": "^6.0.1",
     "typescript": "^5.7.2",
     "vite": "^8.0.16",
     "vitest": "^4.1.9"

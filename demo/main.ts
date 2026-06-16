@@ -7,7 +7,7 @@ import {
   Curve,
   Text,
   Gradient,
-} from "@jssuite/vizat";
+} from "vizat";
 
 const primary = "blueviolet";
 const secondary = "deeppink";

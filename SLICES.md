@@ -11,7 +11,7 @@
 | CI + release workflows | ✅ |
 | `robots.txt` + sitemap | ✅ |
 | Vercel deploy | ✅ [vizat.vercel.app](https://vizat.vercel.app) |
-| npm publish `@jssuite/vizat@2` | ⏳ tag `v2.0.0` pushed — publish via npm (browser auth) |
+| npm publish `vizat@2` | ⏳ rename unscoped — run `npm publish` |
 
 ## CD
 

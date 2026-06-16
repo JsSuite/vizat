@@ -1,0 +1,4 @@
+dist/*.html
+dist/robots.txt
+dist/sitemap.xml
+dist/styles.css

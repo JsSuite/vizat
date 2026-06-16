@@ -15,7 +15,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@jssuite/vizat": resolve(__dirname, "src/index.ts"),
+      vizat: resolve(__dirname, "src/index.ts"),
     },
   },
 });
