@@ -1,0 +1,98 @@
+:root {
+  --vz-bg: #f8fafc;
+  --vz-surface: #ffffff;
+  --vz-border: #e2e8f0;
+  --vz-text: #0f172a;
+  --vz-muted: #64748b;
+  --vz-accent: #6366f1;
+  --vz-accent-2: #2563eb;
+  --vz-radius: 12px;
+  --vz-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--vz-bg);
+  color: var(--vz-text);
+  font-family: Inter, system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: var(--vz-surface);
+  border-bottom: 1px solid var(--vz-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.pg-brand { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+.pg-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: var(--vz-accent);
+}
+
+.pg-nav { display: flex; gap: 16px; }
+.pg-nav a { color: var(--vz-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.pg-nav a:hover { color: var(--vz-text); }
+
+.pg-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--vz-border);
+  background: #f1f5f9;
+}
+
+.pg-hint { color: var(--vz-muted); font-size: 0.9rem; }
+.pg-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.pg-btn {
+  border: 1px solid var(--vz-border);
+  background: var(--vz-surface);
+  color: var(--vz-text);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pg-btn:hover { border-color: #cbd5e1; box-shadow: var(--vz-shadow); }
+.pg-btn.primary {
+  background: var(--vz-accent);
+  border-color: var(--vz-accent);
+  color: #fff;
+}
+.pg-btn.ghost { background: transparent; }
+
+.pg-stage { padding: 20px 24px 32px; }
+.pg-canvas-wrap {
+  min-height: 68vh;
+  border: 1px solid var(--vz-border);
+  border-radius: var(--vz-radius);
+  background: var(--vz-surface);
+  box-shadow: var(--vz-shadow);
+  overflow: hidden;
+}
+
+.pg-canvas-wrap canvas { display: block; cursor: grab; }
+.pg-canvas-wrap canvas:active { cursor: grabbing; }
+
+@media (max-width: 640px) {
+  .pg-header, .pg-toolbar, .pg-stage { padding-left: 16px; padding-right: 16px; }
+}

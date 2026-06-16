@@ -3,37 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vizat Playground</title>
-    <style>
-      * { box-sizing: border-box; margin: 0; }
-      body { background: #0a0a0a; color: #e8e8e8; font-family: Inter, system-ui, sans-serif; }
-      header {
-        display: flex; align-items: center; justify-content: space-between;
-        padding: 16px 24px; border-bottom: 1px solid #262626;
-      }
-      header a { color: #b794f6; text-decoration: none; margin-left: 16px; }
-      #vizat-container { min-height: 70vh; width: 100%; background: #1a1a2e; }
-      .toolbar { padding: 12px 24px; display: flex; gap: 12px; flex-wrap: wrap; }
-      button {
-        background: #7c3aed; color: #fff; border: none; padding: 8px 16px;
-        border-radius: 6px; cursor: pointer; font-weight: 600;
-      }
-      button:hover { background: #6d28d9; }
-    </style>
+    <title>Vizat Playground — Canvas studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./playground.css" />
   </head>
   <body>
-    <header>
-      <strong>Vizat <span style="color:#b794f6">playground</span></strong>
-      <nav>
+    <header class="pg-header">
+      <div class="pg-brand">
+        <strong>Vizat</strong>
+        <span class="pg-badge">Playground</span>
+      </div>
+      <nav class="pg-nav">
         <a href="/">Landing</a>
         <a href="/docs">Docs</a>
       </nav>
     </header>
-    <div class="toolbar">
-      <button type="button" id="btn-redraw">Redraw demo</button>
-      <button type="button" id="btn-clear">Clear</button>
-    </div>
-    <div id="vizat-container"></div>
+
+    <section class="pg-toolbar">
+      <p class="pg-hint">Interactive canvas — drag shapes, snap-to-grid, selection overlay.</p>
+      <div class="pg-actions">
+        <button type="button" id="btn-add-rect" class="pg-btn primary">Add rectangle</button>
+        <button type="button" id="btn-redraw" class="pg-btn">Reset demo</button>
+        <button type="button" id="btn-clear" class="pg-btn ghost">Clear</button>
+      </div>
+    </section>
+
+    <main class="pg-stage">
+      <div id="vizat-container" class="pg-canvas-wrap" aria-label="Vizat canvas playground"></div>
+    </main>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
