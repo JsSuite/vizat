@@ -1,7 +1,7 @@
 {
   "name": "vizat",
-  "version": "2.0.0",
-  "description": "Vizat — blazing-fast HTML5 Canvas 2D scene-tree library",
+  "version": "3.0.0",
+  "description": "Vizat 3 — production HTML5 canvas engine with scene graph, drag, zoom, transformer, and connectors",
   "type": "module",
   "main": "./dist/vizat.umd.cjs",
   "module": "./dist/vizat.js",
@@ -36,6 +36,11 @@
     "2d",
     "graphics",
     "vizat",
+    "scene-graph",
+    "drag-and-drop",
+    "transformer",
+    "konva",
+    "fabric",
     "html5"
   ],
   "author": "m3yevn",

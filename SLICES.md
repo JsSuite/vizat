@@ -2,28 +2,29 @@
 
 | Slice | Status |
 |-------|--------|
-| TypeScript rewrite (`src/`) | ✅ |
-| Scene-tree Canvas + Wrapper | ✅ |
-| Primitives: Line, Rect, Circle, Curve, Text, Gradient, Image | ✅ |
-| Vite playground (`/playground`) | ✅ |
-| Playground interaction (drag, select, snap) | ✅ Glasshouse Phase 1 |
-| `VIZAT_DESIGN_SYSTEM.md` | ✅ |
-| Vitest + happy-dom | ✅ |
-| Landing + `/docs` | ✅ |
+| TypeScript scene graph (`Stage`, `Layer`, `Group`, `Node`) | ✅ v3 |
+| Primitives: Rect, Circle, Ellipse, Line, Arrow, Curve, Text, Star, Image | ✅ |
+| Hit testing, pointer events, drag | ✅ |
+| Wheel zoom, pan, `zoomAt` / `resetView` | ✅ |
+| Transformer (scale, rotate, shift/alt) | ✅ |
+| Connectors that follow nodes | ✅ |
+| Serialize `toObject` / `createNode` | ✅ |
+| Studio playground (tools, marquee, undo, export) | ✅ |
+| Landing with a live stage | ✅ |
+| Vitest (matrix, hit, drag, zoom, transform, connector) | ✅ |
 | CI + release workflows | ✅ |
-| `robots.txt` + sitemap | ✅ |
+| `robots.txt` + sitemap + favicon | ✅ |
 | Vercel deploy | ✅ [vizat.vercel.app](https://vizat.vercel.app) |
-| npm publish `vizat@2` | ✅ [2.0.0](https://www.npmjs.com/package/vizat) |
+| npm publish `vizat@3` | tag `v3.0.0` → release workflow |
 
 ## CD
 
 - Push → `CI` (test, lib build, demo build)
-- Tag `v2.0.0` → npm publish
+- Tag `v3.0.0` → npm publish
 - Vercel root: `dist-demo` (see `vercel.json`)
 
-## Next lap (Boy Scout)
+## Next lap
 
-- Resize handles + multi-select (Phase 2)
-- Light theme on landing (`public/styles.css`)
-- Monaco live editor in playground
-- favicon.svg
+- Resize that bakes scale back into width/height
+- Snap-to-object while dragging
+- Touch pinch zoom

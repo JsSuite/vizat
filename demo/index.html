@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vizat 3 — canvas engine for interactive graphics</title>
+    <meta name="description" content="Vizat 3 is a production HTML5 canvas library. Scene graph, drag and drop, zoom, scale, rotate, lines, and connectors." />
+    <meta name="author" content="Kevin Moe Myint Myat" />
+    <meta name="theme-color" content="#12110f" />
+    <link rel="canonical" href="https://vizat.vercel.app/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@380;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./landing.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="mark" href="/">Viz<span>at</span></a>
+      <nav>
+        <a href="/playground">Studio</a>
+        <a href="/docs">Docs</a>
+        <a href="https://github.com/JsSuite/vizat">GitHub</a>
+        <a href="https://www.npmjs.com/package/vizat">npm</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="copy">
+          <p class="kicker">Version 3 · canvas engine</p>
+          <h1>Draw it. Drag it. Connect it.</h1>
+          <p class="lead">
+            A production scene graph for HTML5 canvas. Hit testing, zoom, pan, a real transformer, arrows, and connectors that stay attached while you move.
+          </p>
+          <p class="install"><code>npm i vizat</code></p>
+          <p class="actions">
+            <a class="solid" href="/playground">Open the studio</a>
+            <a class="ghost" href="/docs">Read the API</a>
+          </p>
+        </div>
+        <div class="stage-card">
+          <div class="chrome"><span></span><span></span><span></span><em>Live — drag and scroll</em></div>
+          <div id="hero-stage"></div>
+        </div>
+      </section>
+      <section class="features">
+        <article><h2>Scene graph</h2><p>Stage, layers, groups, and shapes. One <code>batchDraw()</code> paints the tree.</p></article>
+        <article><h2>Direct manipulation</h2><p>Drag nodes, marquee-select, and scale or rotate from handles.</p></article>
+        <article><h2>Camera</h2><p>Wheel zoom toward the pointer. Pan with space, the hand tool, or the middle button.</p></article>
+        <article><h2>Connectors</h2><p>Arrows bind two nodes and recompute their edges on drag and transform.</p></article>
+        <article><h2>Drawing</h2><p>Rectangles, ellipses, stars, text, polylines, curves, and arrowheads.</p></article>
+        <article><h2>Ship it</h2><p>TypeScript types, ESM and UMD builds, PNG export, Vitest on the math.</p></article>
+      </section>
+      <section class="code">
+        <h2>A stage in a few lines</h2>
+        <pre><code>import { Stage, Layer, Rect, Transformer } from "vizat";
+
+const stage = new Stage({ container: "board", width: 800, height: 500 });
+const layer = new Layer();
+stage.add(layer);
+
+const card = new Rect({
+  x: 80, y: 80, width: 180, height: 110,
+  fill: "#243044", stroke: "#e8a25a", cornerRadius: 16,
+  draggable: true,
+});
+layer.add(card, new Transformer({ nodes: [card] }));</code></pre>
+      </section>
+    </main>
+    <footer>MIT · <a href="https://github.com/JsSuite/vizat">JsSuite/vizat</a> · <a href="https://techlestial.vercel.app">Techlestial Labs</a></footer>
+    <script type="module" src="./landing.ts"></script>
+  </body>
+</html>
